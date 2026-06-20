@@ -13,14 +13,14 @@ class ProfilController extends Controller
             return response()->view('errors.maintenance', [], 503);
         }
 
-        $about_history = SiteSetting::getValue('about_history');
-        $about_visi = SiteSetting::getValue('about_visi');
-        $about_misi = SiteSetting::getValue('about_misi');
+        $about_history = str_replace('Jember', 'Sanford', SiteSetting::getValue('about_history'));
+        $about_visi = str_replace('Jember', 'Sanford', SiteSetting::getValue('about_visi'));
+        $about_misi = str_replace('Jember', 'Sanford', SiteSetting::getValue('about_misi'));
 
         $meta = [
-            'title' => 'Profil Lembaga - LSP Jember',
-            'description' => 'Pelajari sejarah berdirinya, visi, misi, serta bagan struktur organisasi dari Lembaga Sertifikasi Profesi (LSP) Jember.',
-            'keywords' => 'profil lsp jember, visi misi lsp, struktur organisasi lsp',
+            'title' => 'Profil Lembaga - ' . config('app.name'),
+            'description' => 'Pelajari sejarah berdirinya, visi, misi, serta bagan struktur organisasi dari ' . config('app.name') . '.',
+            'keywords' => 'profil ' . config('app.name') . ', visi misi, struktur organisasi',
         ];
 
         return view('pages.profile', compact('about_history', 'about_visi', 'about_misi', 'meta'));

@@ -1,117 +1,120 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="py-16 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6">
-        
-        <!-- Title Banner -->
-        <div class="text-center space-y-4 max-w-3xl mx-auto mb-20" data-aos="fade-up">
-            <span class="text-xs font-bold tracking-widest text-lsp-accent uppercase">HUBUNGI KAMI</span>
-            <h1 class="font-heading font-bold text-4xl sm:text-5xl text-lsp-text tracking-tight">
-                Hubungi Layanan <span class="text-gradient">LSP Jember</span>
+<!-- Kontak Hero -->
+<section class="relative py-24 md:py-32 overflow-hidden bg-white">
+    <!-- Background Decor -->
+    <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[600px] h-[600px] bg-lsp-primary/5 rounded-full blur-[120px]"></div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center space-y-6 max-w-4xl mx-auto mb-20" data-aos="fade-up">
+            <span class="inline-block px-3 py-1 rounded-lg bg-emerald-500/10 text-emerald-600 text-[10px] font-extrabold tracking-widest uppercase">CONNECT</span>
+            <h1 class="font-heading font-extrabold text-5xl md:text-7xl text-lsp-text tracking-tighter leading-tight">
+                Hubungi <span class="text-gradient">Kami.</span>
             </h1>
-            <p class="text-slate-600 text-sm leading-relaxed">
-                Kirimkan pertanyaan, saran, atau proposal kemitraan Anda. Tim administrasi kami akan merespons secepat mungkin.
+            <p class="text-lg text-lsp-muted leading-relaxed font-medium">
+                Siap berkonsultasi mengenai karir profesional Anda? Tim kami siap menjawab setiap pertanyaan mengenai skema, jadwal, dan pendaftaran.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-20 items-start mb-20">
             <!-- Left Info Cards -->
-            <div class="lg:col-span-5 space-y-8" data-aos="fade-right">
-                <div class="bg-white border border-slate-200/80 rounded-3xl p-8 space-y-6 shadow-sm">
-                    <h3 class="font-heading font-bold text-lsp-text text-lg">Informasi Kontak</h3>
+            <div class="lg:col-span-5 space-y-10" data-aos="fade-right">
+                <div class="bg-white rounded-[2.5rem] p-10 space-y-10 shadow-2xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 h-32 w-32 bg-lsp-primary/5 rounded-full blur-3xl"></div>
+                    <h3 class="font-heading font-extrabold text-lsp-text text-2xl tracking-tight">Direct Channels</h3>
                     
-                    <div class="space-y-6 text-sm text-slate-600">
-                        <div class="flex items-start">
-                            <span class="text-2xl mr-4">📍</span>
-                            <div>
-                                <span class="block font-bold text-lsp-text mb-1">Alamat Kantor</span>
-                                {{ $alamat ?? 'Jl. Mastrip No. 164, Jember, Jawa Timur 68121' }}
+                    <div class="space-y-8">
+                        <div class="flex items-start group">
+                            <div class="h-12 w-12 shrink-0 rounded-2xl bg-lsp-primary/10 text-lsp-primary flex items-center justify-center text-xl mr-6 group-hover:bg-lsp-primary group-hover:text-white transition-all duration-300">📍</div>
+                            <div class="space-y-1">
+                                <span class="block text-[10px] font-extrabold text-lsp-muted uppercase tracking-[0.2em]">OFFICE LOCATION</span>
+                                <p class="text-sm font-bold text-lsp-text leading-relaxed">
+                                    {{ $alamat ?? 'Jl. Mastrip No. 164, Sanford, Jawa Timur 68121' }}
+                                </p>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <span class="text-2xl mr-4">📞</span>
-                            <div>
-                                <span class="block font-bold text-lsp-text mb-1">Telepon Resmi</span>
-                                {{ $telepon ?? '(0331) 1234567' }}
+                        <div class="flex items-start group">
+                            <div class="h-12 w-12 shrink-0 rounded-2xl bg-lsp-accent/10 text-lsp-accent flex items-center justify-center text-xl mr-6 group-hover:bg-lsp-accent group-hover:text-white transition-all duration-300">📞</div>
+                            <div class="space-y-1">
+                                <span class="block text-[10px] font-extrabold text-lsp-muted uppercase tracking-[0.2em]">PHONE & SUPPORT</span>
+                                <p class="text-sm font-bold text-lsp-text leading-relaxed">
+                                    081330012100 (WEBSITE DEMO)
+                                </p>
                             </div>
                         </div>
-                        <div class="flex items-start">
-                            <span class="text-2xl mr-4">✉️</span>
-                            <div>
-                                <span class="block font-bold text-lsp-text mb-1">E-mail Hubungan</span>
-                                {{ $email ?? 'info@lsp-jember.com' }}
+                        <div class="flex items-start group">
+                            <div class="h-12 w-12 shrink-0 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xl mr-6 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">✉️</div>
+                            <div class="space-y-1">
+                                <span class="block text-[10px] font-extrabold text-lsp-muted uppercase tracking-[0.2em]">EMAIL SUPPORT</span>
+                                <p class="text-sm font-bold text-lsp-text leading-relaxed">
+                                    independenttendiyvisual@gmail.com
+                                </p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- WhatsApp floating prompt -->
-                <div class="bg-emerald-50 border border-emerald-200 rounded-3xl p-6 text-center space-y-3">
-                    <p class="text-xs text-emerald-800">Ingin respons instan chat 1-on-1?</p>
-                    <a href="https://wa.me/628123456789" target="_blank" class="w-full py-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs tracking-wide inline-flex items-center justify-center transition-colors duration-300">
-                        💬 HUBUNGI VIA WHATSAPP
-                    </a>
+                    <hr class="border-slate-100">
+                    
+                    <div class="space-y-4">
+                        <p class="text-[11px] font-bold text-lsp-muted uppercase tracking-widest text-center">Inquiry via WhatsApp (Demo)</p>
+                        <a href="https://wa.me/6281330012100" class="w-full py-5 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-[11px] tracking-widest flex items-center justify-center shadow-xl shadow-emerald-200 transition-all duration-300">
+                            CHAT WITH US NOW
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Right Form Container -->
+            <!-- Right Form -->
             <div class="lg:col-span-7" data-aos="fade-left">
-                <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 space-y-6 shadow-lg relative">
-                    <h3 class="font-heading font-bold text-lsp-text text-xl">Kirim Formulir Hubung</h3>
+                <div class="bg-white rounded-[2.5rem] p-10 md:p-14 shadow-2xl shadow-slate-200/50 border border-slate-100 relative overflow-hidden">
+                    <h3 class="font-heading font-extrabold text-2xl text-lsp-text mb-8 tracking-tight">Kirim Pesan Cepat</h3>
 
-                    <!-- Alerts -->
                     @if(session('success'))
-                        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 text-xs">
+                        <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 text-xs font-bold mb-8">
                             {{ session('success') }}
                         </div>
                     @endif
 
-                    @if(session('error'))
-                        <div class="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-600 text-xs">
-                            {{ session('error') }}
-                        </div>
-                    @endif
-
-                    <form action="{{ route('kontak.send') }}" method="POST" class="space-y-6">
+                    <form action="{{ route('kontak.send') }}" method="POST" class="space-y-8">
                         @csrf
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label for="nama" class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Nama Anda</label>
-                                <input type="text" name="nama" id="nama" value="{{ old('nama') }}" required class="w-full bg-white border @error('nama') border-rose-500 @else border-slate-200 @enderror rounded-2xl px-4 py-3 text-xs text-lsp-text placeholder-slate-400 focus:outline-none focus:border-lsp-accent">
-                                @error('nama') <span class="text-[10px] text-rose-600 block mt-1">{{ $message }}</span> @enderror
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-3">
+                                <label class="text-[9px] font-extrabold uppercase tracking-[0.2em] text-lsp-muted ml-2">YOUR NAME</label>
+                                <input type="text" name="nama" value="{{ old('nama') }}" required placeholder="Jane Doe" class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 text-xs text-lsp-text placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-lsp-primary/20 focus:bg-white transition-all">
+                                @error('nama') <span class="text-[9px] text-rose-600 font-bold ml-2">{{ $message }}</span> @enderror
                             </div>
 
-                            <div class="space-y-2">
-                                <label for="email" class="text-[10px] font-bold uppercase tracking-wider text-slate-500">E-mail Valid</label>
-                                <input type="email" name="email" id="email" value="{{ old('email') }}" required class="w-full bg-white border @error('email') border-rose-500 @else border-slate-200 @enderror rounded-2xl px-4 py-3 text-xs text-lsp-text placeholder-slate-400 focus:outline-none focus:border-lsp-accent">
-                                @error('email') <span class="text-[10px] text-rose-600 block mt-1">{{ $message }}</span> @enderror
+                            <div class="space-y-3">
+                                <label class="text-[9px] font-extrabold uppercase tracking-[0.2em] text-lsp-muted ml-2">EMAIL ADDRESS</label>
+                                <input type="email" name="email" value="{{ old('email') }}" required placeholder="jane@example.com" class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 text-xs text-lsp-text placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-lsp-primary/20 focus:bg-white transition-all">
+                                @error('email') <span class="text-[9px] text-rose-600 font-bold ml-2">{{ $message }}</span> @enderror
                             </div>
                         </div>
 
-                        <div class="space-y-2">
-                            <label for="subject" class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Subjek Pesan</label>
-                            <input type="text" name="subject" id="subject" value="{{ old('subject') }}" required class="w-full bg-white border @error('subject') border-rose-500 @else border-slate-200 @enderror rounded-2xl px-4 py-3 text-xs text-lsp-text placeholder-slate-400 focus:outline-none focus:border-lsp-accent">
-                            @error('subject') <span class="text-[10px] text-rose-600 block mt-1">{{ $message }}</span> @enderror
+                        <div class="space-y-3">
+                            <label class="text-[9px] font-extrabold uppercase tracking-[0.2em] text-lsp-muted ml-2">SUBJECT</label>
+                            <input type="text" name="subject" value="{{ old('subject') }}" required placeholder="Inquiry about certification..." class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-4 text-xs text-lsp-text placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-lsp-primary/20 focus:bg-white transition-all">
+                            @error('subject') <span class="text-[9px] text-rose-600 font-bold ml-2">{{ $message }}</span> @enderror
                         </div>
 
-                        <div class="space-y-2">
-                            <label for="pesan" class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Isi Pesan</label>
-                            <textarea name="pesan" id="pesan" rows="5" required class="w-full bg-white border @error('pesan') border-rose-500 @else border-slate-200 @enderror rounded-2xl px-4 py-3 text-xs text-lsp-text placeholder-slate-400 focus:outline-none focus:border-lsp-accent">{{ old('pesan') }}</textarea>
-                            @error('pesan') <span class="text-[10px] text-rose-600 block mt-1">{{ $message }}</span> @enderror
+                        <div class="space-y-3">
+                            <label class="text-[9px] font-extrabold uppercase tracking-[0.2em] text-lsp-muted ml-2">MESSAGE</label>
+                            <textarea name="pesan" rows="6" required placeholder="How can we help you today?" class="w-full bg-slate-50 border border-slate-100 rounded-2xl px-6 py-5 text-xs text-lsp-text placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-lsp-primary/20 focus:bg-white transition-all">{{ old('pesan') }}</textarea>
+                            @error('pesan') <span class="text-[9px] text-rose-600 font-bold ml-2">{{ $message }}</span> @enderror
                         </div>
 
-                        <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-lsp-primary to-lsp-accent text-white font-semibold text-xs tracking-wide hover:shadow-lg hover:shadow-lsp-primary/20 hover:scale-[1.01] active:scale-95 transition-all duration-300">
-                            KIRIM SEKARANG
+                        <button type="submit" class="w-full py-5 rounded-2xl bg-slate-900 text-white font-extrabold text-[11px] tracking-widest hover:bg-lsp-primary transition-all duration-500 shadow-xl shadow-slate-200">
+                            SEND MESSAGE NOW
                         </button>
                     </form>
                 </div>
             </div>
         </div>
 
-        <!-- Google Maps Full width embed -->
-        <div class="w-full h-96 rounded-3xl overflow-hidden border border-slate-200 shadow-2xl relative" data-aos="zoom-in">
-            {!! $maps ?? '<iframe class="w-full h-full border-0" src="https://maps.google.com/maps?q=Politeknik%20Negeri%20Jember&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>' !!}
+        <!-- Google Maps -->
+        <div class="w-full h-[500px] rounded-[3rem] overflow-hidden border border-slate-100 shadow-3xl relative mb-20" data-aos="zoom-in">
+            {!! $maps ?? '<iframe class="w-full h-full border-0 grayscale invert opacity-70" src="https://maps.google.com/maps?q=Politeknik%20Negeri%20Sanford&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>' !!}
         </div>
     </div>
 </section>

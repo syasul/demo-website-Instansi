@@ -45,9 +45,9 @@ class BeritaAcaraController extends Controller
             ->sortDesc();
 
         $meta = [
-            'title' => 'Berita & Pengumuman - LSP Jember',
-            'description' => 'Daftar berita, pengumuman resmi, dan artikel kegiatan terbaru dari Lembaga Sertifikasi Profesi (LSP) Jember.',
-            'keywords' => 'berita lsp, pengumuman lsp, kegiatan lsp jember, bnsp jember',
+            'title' => 'Berita & Pengumuman - LSP Sanford',
+            'description' => 'Daftar berita, pengumuman resmi, dan artikel kegiatan terbaru dari Lembaga Sertifikasi Profesi (LSP) Sanford.',
+            'keywords' => 'berita lsp, pengumuman lsp, kegiatan lsp Sanford, bnsp Sanford',
         ];
 
         return view('pages.berita-acara', compact('beritas', 'categories', 'years', 'meta'));
@@ -65,7 +65,7 @@ class BeritaAcaraController extends Controller
         $description = mb_strlen($description) > 160 ? mb_substr($description, 0, 157) . '...' : $description;
 
         $meta = [
-            'title' => $berita->judul . ' - LSP Jember',
+            'title' => $berita->judul . ' - LSP Sanford',
             'description' => $description,
             'keywords' => strtolower($berita->kategori) . ', berita lsp, ' . str_replace('-', ', ', Str::slug($berita->judul)),
         ];

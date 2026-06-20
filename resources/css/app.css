@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import 'tailwindcss';
 
@@ -6,52 +6,169 @@
 @source '../../storage/framework/views/*.php';
 
 @theme {
-    --color-lsp-bg: #f8fafc;
+    --color-lsp-bg: #ffffff;
     --color-lsp-surface: #ffffff;
-    --color-lsp-primary: #4f46e5;
-    --color-lsp-accent: #7c3aed;
+    --color-lsp-primary: #000000;
+    --color-lsp-secondary: #0f172a;
+    --color-lsp-accent: #6366f1;
     --color-lsp-text: #0f172a;
-    --color-lsp-muted: #64748b;
+    --color-lsp-muted: #94a3b8;
+    --color-lsp-border: #f1f5f9;
     
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-body: 'Outfit', sans-serif;
 }
 
 /* Custom scrollbar and scroll behavior */
 html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
     background-color: var(--color-lsp-bg);
     color: var(--color-lsp-text);
     font-family: var(--font-body);
+    letter-spacing: -0.01em;
 }
 
+::selection {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: var(--color-lsp-secondary);
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--color-lsp-bg);
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 4px;
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 10px;
+    transition: background 0.3s;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-lsp-primary);
 }
 
-/* Blur styles */
+/* Editorial Glass - Subtler & More Expensive Looking */
 .glass-effect {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px) saturate(120%);
+    -webkit-backdrop-filter: blur(40px) saturate(120%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Ultra Clean Borders */
+.border-clean {
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* Typography Overhaul */
+.font-editorial {
+    font-family: var(--font-serif);
+    font-style: italic;
+    letter-spacing: -0.02em;
+}
+
+.font-technical {
+    font-family: var(--font-heading);
+    font-weight: 200;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+/* Luxury Transitions */
+.premium-transition {
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Minimalist Card */
+.card-hover {
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0,0,0,0.1);
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, var(--color-lsp-primary) 0%, var(--color-lsp-accent) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-black via-slate-700 to-black;
+}
+
+.premium-btn {
+    @apply border border-black/10 px-16 py-6 uppercase tracking-[0.4em] text-[9px] font-black transition-all duration-1000 hover:bg-black hover:text-white;
+    border-radius: 0;
+}
+
+/* INXDVI Signature Mark - Ultra Subtle */
+.sig-inxdvi {
+    font-family: var(--font-heading);
+    letter-spacing: 1.2em;
+    font-weight: 200;
+    text-transform: uppercase;
+    opacity: 0.15;
+    font-size: 7px;
+    transition: all 1s ease;
+    display: inline-block;
+}
+
+.sig-inxdvi:hover {
+    opacity: 0.5;
+    letter-spacing: 1.5em;
+}
+
+/* Massive Whitespace Helper */
+.section-padding {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+}
+
+/* Custom Magnetic / Asymmetric Utilities (Non-AI Look) */
+.asymmetric-layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+}
+
+.tech-marker {
+    position: relative;
+}
+
+.tech-marker::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+}
+
+/* Advanced Mouse Tracker Utility (to be used with JS) */
+.magnetic-item {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* technical dashing background */
+.tech-dot-bg {
+    background-image: radial-gradient(#6366f1 1.5px, transparent 1.5px);
+    background-size: 40px 40px;
 }

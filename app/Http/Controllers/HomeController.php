@@ -16,10 +16,10 @@ class HomeController extends Controller
             return response()->view('errors.maintenance', [], 503);
         }
 
-        $site_name = SiteSetting::getValue('site_name', 'LSP Jember');
-        $about_history = SiteSetting::getValue('about_history');
-        $about_visi = SiteSetting::getValue('about_visi');
-        $about_misi = SiteSetting::getValue('about_misi');
+        $site_name = config('app.name');
+        $about_history = str_replace('Jember', 'Sanford', SiteSetting::getValue('about_history'));
+        $about_visi = str_replace('Jember', 'Sanford', SiteSetting::getValue('about_visi'));
+        $about_misi = str_replace('Jember', 'Sanford', SiteSetting::getValue('about_misi'));
         
         $sertifikasis = Sertifikasi::where('status', 'aktif')->take(4)->get();
         
@@ -43,7 +43,7 @@ class HomeController extends Controller
         $galleryItems = GalleryItem::orderBy('urutan', 'asc')->get();
 
         $meta = [
-            'title' => SiteSetting::getValue('meta_title', 'LSP Jember'),
+            'title' => SiteSetting::getValue('meta_title', config('app.name')),
             'description' => SiteSetting::getValue('meta_description'),
             'keywords' => SiteSetting::getValue('meta_keywords'),
         ];

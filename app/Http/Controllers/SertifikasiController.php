@@ -17,9 +17,9 @@ class SertifikasiController extends Controller
         $sertifikasis = Sertifikasi::where('status', 'aktif')->orderBy('created_at', 'desc')->get();
 
         $meta = [
-            'title' => 'Skema Sertifikasi - LSP Jember',
-            'description' => 'Daftar skema sertifikasi kompetensi kerja resmi berstandar BNSP yang tersedia di LSP Jember.',
-            'keywords' => 'skema sertifikasi jember, uji kompetensi bnsp, sertifikat garuda, lsp jember skema',
+            'title' => 'Skema Sertifikasi - LSP Sanford',
+            'description' => 'Daftar skema sertifikasi kompetensi kerja resmi berstandar BNSP yang tersedia di LSP Sanford.',
+            'keywords' => 'skema sertifikasi Sanford, uji kompetensi bnsp, sertifikat garuda, lsp Sanford skema',
         ];
 
         return view('pages.sertifikasi', compact('sertifikasis', 'meta'));

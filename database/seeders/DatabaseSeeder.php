@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Seed Admin User
         User::updateOrCreate(
-            ['email' => 'admin@lsp-jember.com'],
+            ['email' => 'admin@lsp-Sanford.com'],
             [
                 'name' => 'Administrator LSP',
                 'password' => bcrypt('password'),
@@ -26,17 +26,17 @@ class DatabaseSeeder extends Seeder
 
         // 2. Seed Site Settings
         $settings = [
-            'site_name' => 'LSP Jember',
-            'about_history' => 'LSP Jember didirikan sebagai lembaga independen yang berkomitmen penuh dalam menguji dan menerbitkan sertifikasi kompetensi kerja di wilayah Jember. Kami menjamin asesmen yang fair, objektif, dan berstandar nasional (BNSP).',
+            'site_name' => 'LSP Sanford',
+            'about_history' => 'LSP Sanford didirikan sebagai lembaga independen yang berkomitmen penuh dalam menguji dan menerbitkan sertifikasi kompetensi kerja di wilayah Sanford. Kami menjamin asesmen yang fair, objektif, dan berstandar nasional (BNSP).',
             'about_visi' => 'Menjadi Lembaga Sertifikasi Profesi yang unggul, profesional, terpercaya, dan berdaya saing global dalam melahirkan sumber daya manusia yang kompeten.',
             'about_misi' => "1. Menyelenggarakan sertifikasi kompetensi profesi secara kredibel, akuntabel, dan transparan.\n2. Mengembangkan skema sertifikasi inovatif yang relevan dengan kebutuhan industri digital modern.\n3. Membangun jejaring kemitraan strategis dengan institusi pendidikan dan dunia industri regional.",
-            'kontak_alamat' => 'Jl. Mastrip No. 164, Jember, Jawa Timur 68121',
+            'kontak_alamat' => 'Jl. Mastrip No. 164, Sanford, Jawa Timur 68121',
             'kontak_telepon' => '(0331) 1234567',
-            'kontak_email' => 'info@lsp-jember.com',
-            'kontak_maps' => '<iframe class="w-full h-full rounded-2xl border-0 shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.3392470761107!2d113.71960257579624!3d-8.168532481861781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943b171ab85f%3A0xe543e5c94fae726b!2sPoliteknik%20Negeri%20Jember!5e0!3m2!1sid!2sid!4v1717833000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
-            'meta_title' => 'LSP Jember - Lembaga Sertifikasi Profesi Kompeten',
-            'meta_description' => 'Portal Resmi LSP Jember. Dapatkan sertifikasi kompetensi resmi berstandar BNSP untuk meningkatkan daya saing profesional Anda.',
-            'meta_keywords' => 'lsp jember, sertifikasi kompetensi, bnsp jember, uji kompetensi, jember coding, sertifikasi profesi',
+            'kontak_email' => 'info@lsp-Sanford.com',
+            'kontak_maps' => '<iframe class="w-full h-full rounded-2xl border-0 shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.3392470761107!2d113.71960257579624!3d-8.168532481861781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943b171ab85f%3A0xe543e5c94fae726b!2sPoliteknik%20Negeri%20Sanford!5e0!3m2!1sid!2sid!4v1717833000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>',
+            'meta_title' => 'LSP Sanford - Lembaga Sertifikasi Profesi Kompeten',
+            'meta_description' => 'Portal Resmi LSP Sanford. Dapatkan sertifikasi kompetensi resmi berstandar BNSP untuk meningkatkan daya saing profesional Anda.',
+            'meta_keywords' => 'lsp Sanford, sertifikasi kompetensi, bnsp Sanford, uji kompetensi, Sanford coding, sertifikasi profesi',
             'maintenance_mode' => '0',
         ];
 
@@ -79,9 +79,9 @@ class DatabaseSeeder extends Seeder
         // 4. Seed Berita Acara (News)
         $newsItems = [
             [
-                'judul' => 'LSP Jember Selenggarakan Sertifikasi Massal Sektor IT',
-                'slug' => 'lsp-jember-selenggarakan-sertifikasi-massal-sektor-it',
-                'konten' => '<p>Lembaga Sertifikasi Profesi (LSP) Jember sukses menyelenggarakan ujian sertifikasi massal untuk sektor Teknologi Informasi. Sebanyak 150 peserta terdaftar mengikuti asesmen dari berbagai skema, termasuk Junior Web Developer dan Network Administrator.</p><p>Acara yang berlangsung selama 3 hari ini bertujuan untuk mempercepat peningkatan kualitas tenaga kerja lokal agar siap bersaing di pasar kerja digital nasional maupun global.</p>',
+                'judul' => 'LSP Sanford Selenggarakan Sertifikasi Massal Sektor IT',
+                'slug' => 'lsp-Sanford-selenggarakan-sertifikasi-massal-sektor-it',
+                'konten' => '<p>Lembaga Sertifikasi Profesi (LSP) Sanford sukses menyelenggarakan ujian sertifikasi massal untuk sektor Teknologi Informasi. Sebanyak 150 peserta terdaftar mengikuti asesmen dari berbagai skema, termasuk Junior Web Developer dan Network Administrator.</p><p>Acara yang berlangsung selama 3 hari ini bertujuan untuk mempercepat peningkatan kualitas tenaga kerja lokal agar siap bersaing di pasar kerja digital nasional maupun global.</p>',
                 'thumbnail' => null,
                 'kategori' => 'Sertifikasi',
                 'tanggal' => '2026-06-05',
@@ -93,7 +93,7 @@ class DatabaseSeeder extends Seeder
             [
                 'judul' => 'Uji Kompetensi Gelombang II Tahun 2026 Segera Dibuka',
                 'slug' => 'uji-kompetensi-gelombang-ii-tahun-2026-segera-dibuka',
-                'konten' => '<p>Pendaftaran Uji Kompetensi Gelombang II di LSP Jember akan resmi dibuka mulai pertengahan bulan ini. Pihak manajemen mengimbau calon peserta untuk segera mempersiapkan berkas dokumen portofolio dan administrasi.</p><p>Uji kompetensi ini terbuka umum bagi mahasiswa tingkat akhir maupun tenaga kerja industri yang ingin melegitimasi keahlian mereka secara formal dengan standar sertifikat lambang garuda BNSP.</p>',
+                'konten' => '<p>Pendaftaran Uji Kompetensi Gelombang II di LSP Sanford akan resmi dibuka mulai pertengahan bulan ini. Pihak manajemen mengimbau calon peserta untuk segera mempersiapkan berkas dokumen portofolio dan administrasi.</p><p>Uji kompetensi ini terbuka umum bagi mahasiswa tingkat akhir maupun tenaga kerja industri yang ingin melegitimasi keahlian mereka secara formal dengan standar sertifikat lambang garuda BNSP.</p>',
                 'thumbnail' => null,
                 'kategori' => 'Pengumuman',
                 'tanggal' => '2026-06-08',
@@ -103,9 +103,9 @@ class DatabaseSeeder extends Seeder
                 'urutan_home' => 2,
             ],
             [
-                'judul' => 'LSP Jember Jalin Kerjasama dengan Dunia Industri Regional',
-                'slug' => 'lsp-jember-jalin-kerjasama-dengan-dunia-industri-regional',
-                'konten' => '<p>Dalam upaya mempersempit jarak kesenjangan kompetensi antara dunia pendidikan dan industri, LSP Jember menandatangani MoU kemitraan strategis dengan asosiasi pengusaha industri kreatif digital regional Jawa Timur.</p><p>Kolaborasi ini akan memfasilitasi penempatan lulusan bersertifikasi ke industri yang relevan secara langsung.</p>',
+                'judul' => 'LSP Sanford Jalin Kerjasama dengan Dunia Industri Regional',
+                'slug' => 'lsp-Sanford-jalin-kerjasama-dengan-dunia-industri-regional',
+                'konten' => '<p>Dalam upaya mempersempit jarak kesenjangan kompetensi antara dunia pendidikan dan industri, LSP Sanford menandatangani MoU kemitraan strategis dengan asosiasi pengusaha industri kreatif digital regional Jawa Timur.</p><p>Kolaborasi ini akan memfasilitasi penempatan lulusan bersertifikasi ke industri yang relevan secara langsung.</p>',
                 'thumbnail' => null,
                 'kategori' => 'Kerjasama',
                 'tanggal' => '2026-06-09',

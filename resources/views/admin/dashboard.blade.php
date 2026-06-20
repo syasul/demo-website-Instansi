@@ -5,7 +5,7 @@
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
             <h1 class="font-heading font-bold text-2xl text-lsp-text">Dashboard Overview</h1>
-            <p class="text-xs text-slate-600">Selamat datang kembali di panel administrasi portal LSP Jember.</p>
+            <p class="text-xs text-slate-600">Selamat datang kembali di panel administrasi portal LSP Sanford.</p>
         </div>
         <span class="text-xs text-slate-600 font-semibold px-4 py-2 bg-white rounded-xl border border-slate-200 shadow-sm">
             Hari Ini: {{ date('d F Y') }}

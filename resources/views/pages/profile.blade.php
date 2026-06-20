@@ -1,140 +1,161 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="py-16 relative overflow-hidden">
-    <div class="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:6rem_6rem] opacity-40"></div>
+<!-- Profil Hero -->
+<section class="relative py-32 md:py-48 overflow-hidden bg-slate-950">
+    <div class="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(#6366f1_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+    <div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+    <div class="absolute inset-0 bg-[url('https://res.cloudinary.com/dydlv7s4w/image/upload/v1661858593/texture_grain_k2e9w8.png')] opacity-10 pointer-events-none"></div>
+
     <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <!-- Page Title Header -->
-        <div class="text-center space-y-4 max-w-3xl mx-auto mb-20" data-aos="fade-up">
-            <span class="text-xs font-bold tracking-widest text-lsp-accent uppercase">PROFIL LENGKAP</span>
-            <h1 class="font-heading font-bold text-4xl sm:text-5xl text-lsp-text tracking-tight leading-none">
-                Mengenal <span class="text-gradient">LSP Jember</span>
+        <div class="text-center space-y-8 max-w-4xl mx-auto" data-aos="fade-up">
+            <div class="inline-flex items-center space-x-3 px-4 py-2 rounded-full glass-effect border border-white/10 shadow-2xl">
+                <span class="text-[9px] font-black tracking-[0.4em] uppercase text-white/70">ESTABLISHED QUALITY • BNSP LICENSED</span>
+            </div>
+            <h1 class="font-heading font-black text-6xl md:text-8xl text-white tracking-tighter leading-tight">
+                Modern <span class="text-gradient">Legacy.</span>
             </h1>
-            <p class="text-slate-600 text-sm leading-relaxed">
-                Menyelami sejarah berdirinya, arah visi misi, hingga jajaran pengurus komite pelaksana sertifikasi kompetensi.
+            <p class="text-xl text-slate-400 leading-relaxed font-medium max-w-2xl mx-auto">
+                Pusat keunggulan sertifikasi kompetensi profesi di kawasan Sanford yang berorientasi pada standar kualitas industri global dan integritas tinggi.
             </p>
         </div>
+    </div>
+</section>
 
+<section class="py-40 relative bg-white">
+    <!-- Technical Markers -->
+    <div class="absolute top-40 left-10 text-[8px] font-black text-slate-200 tracking-[1em] vertical-text hidden xl:block">IDENTITY.CORE.V.2</div>
+    
+    <div class="max-w-7xl mx-auto px-6">
         <!-- History Content -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-24">
-            <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
-                <h2 class="font-heading font-bold text-2xl text-lsp-text">Sejarah Berdiri</h2>
-                <div class="text-slate-600 text-sm leading-relaxed space-y-4">
-                    <p>
-                        {{ $about_history ?? 'LSP Jember didirikan sebagai lembaga sertifikasi kompetensi kerja berlisensi resmi dari Badan Nasional Sertifikasi Profesi (BNSP). Berawal dari inisiatif untuk menjembatani kompetensi SDM lokal dengan kualifikasi standar industri, kami terus berkembang menjadi pilar penting di kawasan Jember dan Jawa Timur.' }}
-                    </p>
-                    <p>
-                        Dengan didukung sarana Tempat Uji Kompetensi (TUK) yang terverifikasi dan asesor berlisensi resmi, kami menjamin seluruh proses asesmen dilakukan secara objektif, fair, transparan, dan dapat dipertanggungjawabkan hasilnya.
-                    </p>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start mb-40">
+            <article class="lg:col-span-7 space-y-12" data-aos="fade-right">
+                <div class="space-y-6">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-indigo-600/5 text-indigo-600 text-[10px] font-black tracking-[0.3em] uppercase">THE GENESIS</span>
+                    <h2 class="font-heading font-black text-4xl text-slate-900 tracking-tighter leading-tight">Mewujudkan Standar <span class="text-indigo-600">Kompetensi Nasional.</span></h2>
+                    
+                    <div class="text-slate-500 text-lg leading-relaxed space-y-8 font-medium">
+                        <p>
+                            {{ $about_history ?? config('app.name') . ' didirikan sebagai lembaga sertifikasi kompetensi kerja berlisensi resmi dari Badan Nasional Sertifikasi Profesi (BNSP). Berawal dari inisiatif untuk menjembatani kompetensi SDM lokal dengan kualifikasi standar industri, kami terus berkembang menjadi pilar penting di kawasan Sanford dan Jawa Timur.' }}
+                        </p>
+                        <p>
+                            Dengan didukung sarana Tempat Uji Kompetensi (TUK) yang terverifikasi dan asesor berlisensi resmi, kami menjamin seluruh proses asesmen dilakukan secara objektif, fair, transparan, dan dapat dipertanggungjawabkan hasilnya sesuai dengan regulasi yang berlaku.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </article>
 
             <!-- Side visual info -->
-            <div class="lg:col-span-5" data-aos="fade-left">
-                <div class="bg-white border border-slate-200/80 rounded-3xl p-8 space-y-6 shadow-sm relative overflow-hidden">
-                    <div class="absolute -top-10 -right-10 h-32 w-32 bg-lsp-accent/5 rounded-full blur-2xl"></div>
-                    <h3 class="font-heading font-bold text-lsp-text text-lg">Mengapa Memilih Kami?</h3>
+            <aside class="lg:col-span-5" data-aos="fade-left">
+                <div class="bg-slate-50 rounded-[3.5rem] p-12 space-y-10 border border-slate-100 relative overflow-hidden group shadow-sm">
+                    <div class="absolute -top-20 -right-20 h-64 w-64 bg-indigo-600/5 rounded-full blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+                    <h3 class="font-heading font-black text-slate-900 text-2xl tracking-tighter">Strategic Pillars</h3>
                     
-                    <ul class="space-y-4 text-xs text-slate-600">
-                        <li class="flex items-start">
-                            <span class="text-lsp-accent mr-3">✔️</span>
-                            <div>
-                                <span class="block font-bold text-lsp-text mb-1">Berlisensi Resmi BNSP</span>
-                                Sertifikat berlambang garuda diakui secara nasional oleh negara dan asosiasi industri.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-lsp-accent mr-3">✔️</span>
-                            <div>
-                                <span class="block font-bold text-lsp-text mb-1">Asesor Kompeten</span>
-                                Diuji langsung oleh praktisi berpengalaman dan bersertifikat asesor BNSP.
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-lsp-accent mr-3">✔️</span>
-                            <div>
-                                <span class="block font-bold text-lsp-text mb-1">TUK Terstandardisasi</span>
-                                Fasilitas laboratorium komputer dan jaringan modern yang nyaman untuk mendukung ujian asesi.
-                            </div>
-                        </li>
+                    <ul class="space-y-8">
+                        @php
+                            $pillars = [
+                                ['icon' => '✓', 'title' => 'BNSP LICENSED', 'desc' => 'Sertifikat resmi berlogo Garuda yang diakui secara nasional.', 'color' => 'indigo'],
+                                ['icon' => '★', 'title' => 'EXPERT ASESORS', 'desc' => 'Asesmen oleh praktisi ahli dengan jam terbang tinggi.', 'color' => 'amber'],
+                                ['icon' => '⚡', 'title' => 'MODERN TUK', 'desc' => 'Fasilitas uji kompetensi standar teknologi terbaru.', 'color' => 'emerald']
+                            ];
+                        @endphp
+                        @foreach($pillars as $p)
+                            <li class="flex items-start group/pill">
+                                <div class="h-12 w-12 shrink-0 rounded-2xl bg-white text-{{ $p['color'] }}-600 flex items-center justify-center font-black mr-6 shadow-sm group-hover/pill:bg-{{ $p['color'] }}-600 group-hover/pill:text-white transition-all duration-500">{{ $p['icon'] }}</div>
+                                <div>
+                                    <h5 class="font-heading font-black text-[11px] text-slate-900 uppercase tracking-widest mb-2">{{ $p['title'] }}</h5>
+                                    <p class="text-sm text-slate-500 leading-relaxed font-medium">{{ $p['desc'] }}</p>
+                                </div>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
-            </div>
+            </aside>
         </div>
 
-        <!-- Vision and Mission Grid Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+        <!-- Vision and Mission Refinement -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-40">
             <!-- Visi Card -->
-            <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 relative overflow-hidden shadow-sm" data-aos="fade-up">
-                <div class="absolute top-0 left-0 w-full h-[3px] bg-lsp-primary"></div>
-                <div class="h-12 w-12 rounded-xl bg-lsp-primary/10 text-lsp-accent flex items-center justify-center text-2xl font-bold mb-6">
-                    🎯
-                </div>
-                <h3 class="font-heading font-bold text-xl text-lsp-text mb-4">Visi LSP Jember</h3>
-                <p class="text-sm text-slate-600 leading-relaxed italic">
-                    "{{ $about_visi ?? 'Menjadi Lembaga Sertifikasi yang unggul, terpercaya, dan berdaya saing global.' }}"
+            <div class="card-hover group bg-slate-950 rounded-[3.5rem] p-16 relative overflow-hidden shadow-2xl" data-aos="fade-up">
+                <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5"></div>
+                <div class="h-16 w-16 rounded-[1.5rem] bg-indigo-600 text-white flex items-center justify-center text-3xl mb-12 shadow-xl shadow-indigo-500/20">🎯</div>
+                <h3 class="font-heading font-black text-3xl text-white mb-6 tracking-tighter">Vision Excellence</h3>
+                <p class="text-xl text-slate-400 leading-relaxed font-medium italic">
+                    "{{ $about_visi ?? 'Menjadi Lembaga Sertifikasi yang unggul, terpercaya, dan berdaya saing global secara berkelanjutan.' }}"
                 </p>
             </div>
 
             <!-- Misi Card -->
-            <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-10 relative overflow-hidden shadow-sm" data-aos="fade-up" data-aos-delay="100">
-                <div class="absolute top-0 left-0 w-full h-[3px] bg-lsp-accent"></div>
-                <div class="h-12 w-12 rounded-xl bg-lsp-accent/10 text-lsp-accent flex items-center justify-center text-2xl font-bold mb-6">
-                    ⚡
-                </div>
-                <h3 class="font-heading font-bold text-xl text-lsp-text mb-4">Misi LSP Jember</h3>
-                <div class="text-sm text-slate-600 space-y-3 leading-relaxed">
+            <div class="card-hover group bg-white rounded-[3.5rem] p-16 relative overflow-hidden shadow-sm border border-slate-100" data-aos="fade-up" data-aos-delay="150">
+                <div class="h-16 w-16 rounded-[1.5rem] bg-slate-900 text-white flex items-center justify-center text-3xl mb-12 shadow-xl shadow-slate-200">⚡</div>
+                <h3 class="font-heading font-black text-3xl text-slate-900 mb-6 tracking-tighter">Core Mission</h3>
+                <div class="text-lg text-slate-500 space-y-6 leading-relaxed font-medium">
                     @if(isset($about_misi) && $about_misi)
                         {!! nl2br(e($about_misi)) !!}
                     @else
-                        1. Menyelenggarakan sertifikasi kompetensi kerja secara profesional dan akuntabel.<br>
-                        2. Mengembangkan skema sertifikasi sesuai tuntutan kebutuhan pasar kerja.<br>
-                        3. Memelihara kompetensi tenaga kerja bersertifikat.
+                        <div class="flex items-start"><span class="text-indigo-600 font-black mr-4">01.</span> Menyelenggarakan sertifikasi kompetensi kerja secara profesional.</div>
+                        <div class="flex items-start"><span class="text-indigo-600 font-black mr-4">02.</span> Mengembangkan skema sertifikasi sesuai tuntutan pasar global.</div>
+                        <div class="flex items-start"><span class="text-indigo-600 font-black mr-4">03.</span> Memelihara kompetensi asesi secara berkesinambungan.</div>
                     @endif
                 </div>
             </div>
         </div>
 
-        <!-- Organizational Structure Section -->
-        <div class="space-y-12" data-aos="fade-up">
-            <div class="text-center space-y-2 mb-16">
-                <h2 class="font-heading font-bold text-2xl text-lsp-text">Struktur Organisasi</h2>
-                <p class="text-slate-600 text-sm max-w-xl mx-auto">
-                    Jajaran komite eksekutif pelaksana operasional harian Lembaga Sertifikasi Profesi Jember.
+        <!-- Organizational Structure Refinement -->
+        <div class="py-20" data-aos="fade-up">
+            <div class="text-center space-y-6 mb-24">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-slate-900 text-white text-[9px] font-black tracking-[0.4em] uppercase">HIERARCHY</span>
+                <h2 class="font-heading font-black text-5xl text-slate-900 tracking-tighter leading-tight">Executive Council</h2>
+                <p class="text-slate-500 text-lg max-w-2xl mx-auto font-medium leading-relaxed">
+                    Struktur kepemimpinan yang berdedikasi menjaga integritas dan operasional harian {{ config('app.name') }}.
                 </p>
             </div>
 
-            <!-- Tech diagram tree design -->
-            <div class="max-w-4xl mx-auto flex flex-col items-center space-y-8 relative">
-                <!-- Line connection guides -->
-                <div class="absolute top-12 bottom-6 left-1/2 w-[2px] bg-slate-300 -z-10 hidden sm:block"></div>
-
-                <!-- 1. Ketua LSP -->
-                <div class="bg-white border border-lsp-accent/40 rounded-2xl p-6 text-center w-64 shadow-xl">
-                    <span class="block text-[10px] font-bold tracking-widest text-lsp-accent uppercase mb-1">KETUA LSP</span>
-                    <span class="block font-heading font-bold text-lsp-text text-base">Dr. Ir. Hermawan, M.T.</span>
-                    <span class="block text-[11px] text-slate-500 mt-1">Direktur Utama Eksekutif</span>
-                </div>
-
-                <!-- 2. Komite Skema -->
-                <div class="flex flex-col sm:flex-row gap-8 sm:gap-32 w-full justify-center">
-                    <!-- Left: Bagian Administrasi -->
-                    <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center w-60 self-center shadow-md">
-                        <span class="block text-[9px] font-bold tracking-widest text-lsp-primary uppercase mb-1">MANAJER ADMIN & KEUANGAN</span>
-                        <span class="block font-heading font-bold text-lsp-text text-sm">Rina Amelia, S.E.</span>
+            <div class="max-w-6xl mx-auto relative overflow-x-auto pb-20 no-scrollbar">
+                <div class="min-w-[1000px] flex flex-col items-center space-y-24 relative">
+                    <!-- Connector Lines (Visual Tech Style) -->
+                    <div class="absolute top-24 bottom-24 left-1/2 w-0.5 bg-indigo-100 -z-10">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2 h-2 bg-indigo-600 rounded-full"></div>
+                    </div>
+                    
+                    <!-- Level 1: Director -->
+                    <div class="relative group">
+                        <div class="absolute -inset-6 bg-gradient-to-tr from-indigo-600 to-purple-600 rounded-[3rem] blur-2xl opacity-10 group-hover:opacity-30 transition-all duration-700"></div>
+                        <div class="relative bg-slate-900 rounded-[3rem] p-12 text-center w-[22rem] shadow-2xl border border-white/10 group-hover:-translate-y-3 transition-transform duration-700">
+                            <span class="block text-[10px] font-black tracking-[0.4em] text-indigo-400 uppercase mb-4">DIRECTOR GENERAL</span>
+                            <h4 class="font-heading font-black text-white text-2xl leading-tight">Dr. Ir. Hermawan, M.T.</h4>
+                            <div class="w-12 h-0.5 bg-indigo-600 mx-auto my-6 opacity-50"></div>
+                            <span class="block text-[11px] text-slate-500 font-black uppercase tracking-[0.2em]">Strategic Ops Controller</span>
+                        </div>
                     </div>
 
-                    <!-- Right: Manajer Standardisasi / Sertifikasi -->
-                    <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center w-60 self-center shadow-md">
-                        <span class="block text-[9px] font-bold tracking-widest text-lsp-primary uppercase mb-1">MANAJER SERTIFIKASI</span>
-                        <span class="block font-heading font-bold text-lsp-text text-sm">Bambang Wijaya, M.Kom.</span>
+                    <!-- Level 2: Managers -->
+                    <div class="flex justify-between w-full relative px-20">
+                        <!-- Technical Horizontal connector -->
+                        <div class="absolute top-1/2 left-40 right-40 h-0.5 bg-indigo-50 -z-10"></div>
+                        
+                        @php
+                            $managers = [
+                                ['role' => 'CERTIFICATION', 'name' => 'Bambang Wijaya, M.Kom.', 'dept' => 'Assessment Dept.'],
+                                ['role' => 'ADMIN & FINANCE', 'name' => 'Rina Amelia, S.E.', 'dept' => 'Logistic & Finance']
+                            ];
+                        @endphp
+                        @foreach($managers as $m)
+                            <div class="bg-white rounded-[2.5rem] p-10 text-center w-72 shadow-xl border border-slate-100 hover:-translate-y-3 transition-all duration-700 group/node">
+                                <span class="block text-[9px] font-black tracking-[0.3em] text-indigo-600 uppercase mb-4">{{ $m['role'] }}</span>
+                                <h4 class="font-heading font-black text-slate-900 text-lg leading-tight">{{ $m['name'] }}</h4>
+                                <span class="block text-[10px] text-slate-400 font-bold uppercase mt-4 tracking-widest">{{ $m['dept'] }}</span>
+                            </div>
+                        @endforeach
                     </div>
-                </div>
 
-                <!-- 3. Manajer Mutu -->
-                <div class="bg-white border border-slate-200 rounded-2xl p-5 text-center w-60 shadow-md">
-                    <span class="block text-[9px] font-bold tracking-widest text-lsp-primary uppercase mb-1">MANAJER MUTU & PENJAMINAN</span>
-                    <span class="block font-heading font-bold text-lsp-text text-sm">Drs. Ahmad Fauzi, M.T.</span>
+                    <!-- Level 3: Quality -->
+                    <div class="bg-white rounded-[2.5rem] p-10 text-center w-72 shadow-xl border border-slate-100 hover:-translate-y-3 transition-all duration-700">
+                        <span class="block text-[9px] font-black tracking-[0.3em] text-indigo-600 uppercase mb-4">QUALITY & COMPLIANCE</span>
+                        <h4 class="font-heading font-black text-slate-900 text-lg leading-tight">Drs. Ahmad Fauzi, M.T.</h4>
+                        <span class="block text-[10px] text-slate-400 font-bold uppercase mt-4 tracking-widest">Internal Control Lead</span>
+                    </div>
                 </div>
             </div>
         </div>

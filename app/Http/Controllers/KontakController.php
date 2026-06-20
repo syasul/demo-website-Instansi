@@ -15,15 +15,15 @@ class KontakController extends Controller
             return response()->view('errors.maintenance', [], 503);
         }
 
-        $alamat = SiteSetting::getValue('kontak_alamat');
-        $telepon = SiteSetting::getValue('kontak_telepon');
-        $email = SiteSetting::getValue('kontak_email');
-        $maps = SiteSetting::getValue('kontak_maps');
+        $alamat = "Jl. Mastrip No. 164, Sanford, Jawa Timur 68121";
+        $telepon = "081330012100";
+        $email = "independenttendiyvisual@gmail.com";
+        $maps = '<iframe class="w-full h-full border-0 grayscale invert opacity-70" src="https://maps.google.com/maps?q=Sanford&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>';
 
         $meta = [
-            'title' => 'Hubungi Kami - LSP Jember',
-            'description' => 'Hubungi layanan pelanggan LSP Jember untuk informasi uji kompetensi, pendaftaran skema, dan kerjasama kemitraan.',
-            'keywords' => 'alamat lsp jember, kontak lsp jember, lokasi lsp jember',
+            'title' => 'Hubungi Kami - ' . config('app.name'),
+            'description' => 'Hubungi layanan pelanggan ' . config('app.name') . ' untuk informasi uji kompetensi, pendaftaran skema, dan kerjasama kemitraan.',
+            'keywords' => 'alamat ' . config('app.name') . ', kontak ' . config('app.name') . ', lokasi ' . config('app.name'),
         ];
 
         return view('pages.kontak', compact('alamat', 'telepon', 'email', 'maps', 'meta'));
@@ -50,7 +50,7 @@ class KontakController extends Controller
 
         RateLimiter::hit($ipKey, 60);
 
-        Log::info("Notifikasi Email Form Kontak LSP Jember:\n" .
+        Log::info("Notifikasi Email Form Kontak LSP Sanford:\n" .
             "Nama: {$request->nama}\n" .
             "Email: {$request->email}\n" .
             "Subject: {$request->subject}\n" .

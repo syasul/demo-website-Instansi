@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Admin Dashboard &mdash; LSP Jember</title>
+    <title>Admin Dashboard &mdash; LSP Sanford</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-lsp-bg text-lsp-text font-body">
@@ -19,7 +19,7 @@
                     L
                 </div>
                 <div>
-                    <span class="font-heading font-bold text-sm tracking-tight text-lsp-text block">LSP JEMBER</span>
+                    <span class="font-heading font-bold text-sm tracking-tight text-lsp-text block">LSP Sanford</span>
                     <span class="text-[9px] uppercase tracking-wider text-lsp-accent font-semibold block">ADMIN PANEL</span>
                 </div>
             </div>

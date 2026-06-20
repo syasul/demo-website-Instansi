@@ -11,7 +11,7 @@ class PengaturanController extends Controller
     public function index()
     {
         $settings = [
-            'site_name' => SiteSetting::getValue('site_name', 'LSP Jember'),
+            'site_name' => SiteSetting::getValue('site_name', 'LSP Sanford'),
             'kontak_alamat' => SiteSetting::getValue('kontak_alamat'),
             'kontak_telepon' => SiteSetting::getValue('kontak_telepon'),
             'kontak_email' => SiteSetting::getValue('kontak_email'),

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Situs Sedang Pemeliharaan - LSP Jember</title>
+    <title>Situs Sedang Pemeliharaan - LSP Sanford</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-lsp-bg text-lsp-text font-body min-h-screen flex items-center justify-center p-6">
@@ -24,7 +24,7 @@
         </div>
 
         <div class="pt-4 border-t border-white/5 relative z-10 text-xs text-slate-500">
-            <p>LSP Jember &middot; Hubungi Customer Service untuk Urgensi</p>
+            <p>LSP Sanford &middot; Hubungi Customer Service untuk Urgensi</p>
             <p class="mt-2 font-medium">Powered by inxdvi</p>
         </div>
     </div>
